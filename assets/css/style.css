@@ -15,6 +15,7 @@ html {
 body {
     font-size: 1.8rem;
 }
+
 .contenedor {
     min-height: 100vh;
     width: 90%;
@@ -34,59 +35,74 @@ body {
     flex-direction: column;
     gap: 2rem;
     flex-wrap: wrap;
-
 }
 
 @media screen and (min-width: 720px) {
     .padre .primerTitulo {
         flex-direction: row;
+        animation-name: animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
     }
 
-}
+    @keyframes animation {
+        0% {
+            transform: scale(1);
+        }
 
-.padre .primerTitulo:hover {
-    color: rgb(11, 39, 71);
-}
+        50% {
+            transform: scale(1.1);
+        }
 
-.padre .parrafo {
-    color: rgb(4, 4, 15);
-    flex-wrap: wrap;
-}
+        100% {
+            transform: scale(1);
+        }
 
-.padre .fotos {
-    width: 100%;
-}
+    }
 
-header {
-    background-color: rgb(11, 39, 71);
-    display: flex;
-}
+    .padre .primerTitulo:hover {
+        color: rgb(11, 39, 71);
+    }
 
-header .navBar {
-    max-width: 100%;
-    margin: 0px auto;
-    width: 100%;
-    display: flex;
-}
+    .padre .parrafo {
+        color: rgb(4, 4, 15);
+        flex-wrap: wrap;
+    }
 
-header .navBar .navBarNav {
-    display: inline-block;
-    text-decoration: none;
-}
+    .padre .fotos {
+        width: 100%;
+    }
 
-header .navBar .navBarNav .navBarItem {
-    display: inline-block;
-}
+    header {
+        background-color: rgb(11, 39, 71);
+        display: flex;
+    }
 
-header .navBar .navBarNav .navBarItem .navBarLink {
-    color: white;
-    text-decoration: none;
-}
+    header .navBar {
+        max-width: 100%;
+        margin: 0px auto;
+        width: 100%;
+        display: flex;
+    }
 
-footer {
-    background-color: rgb(11, 39, 71);
-}
+    header .navBar .navBarNav {
+        display: inline-block;
+        text-decoration: none;
+    }
 
-.galeria img {
-    width: 100%;
-}
+    header .navBar .navBarNav .navBarItem {
+        display: inline-block;
+    }
+
+    header .navBar .navBarNav .navBarItem .navBarLink {
+        color: white;
+        text-decoration: none;
+    }
+
+    footer {
+        background-color: rgb(11, 39, 71);
+    }
+
+    .galeria img {
+        width: 100%;
+    }
